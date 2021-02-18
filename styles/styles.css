@@ -1,5 +1,5 @@
 	* {
-	padding: 0px;
+    padding:0px;
 	margin: 0px;
 	box-sizing: border-box;
 }
@@ -9,57 +9,96 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
 body {
-	margin: 1.25em, 1em;
+    background-image:url(../images/concert-pick.jpeg);
+    color:white;
+    font-family:'Roboto', sans-serif;
+    background-size: 100% auto;
 }
-
-#wrapper {
-	width: 100%;
-	margin: 0px auto;
+.nav-holder {
+    width:109.5%;
 }
-
+.logo-img {
+    width:51px;
+    float:left;
+}
 nav [role="select"] {
 	width: 100%;
-	position: relative;
     margin:0px auto;
+    margin-left:10%;
+    
 }
 nav[role="select"] select {
 	display: none;
 }
+.select-menu.styling {
+    
+}
 nav[role="select"] ul {
     width:100%;
-    list-style:none;
 }
 nav[role="select"] ul li {
 	float: left;
-	padding: .55em .45em;
-	width: 19%;
+	width: 11%;
 	font-size: 1.2em;
+    padding-top:.75em;
+    padding-bottom:.75em;
 	background-color: black;
 	text-align: center;
 	cursor: pointer;
+    list-style-type:none;
 }
-
 nav[role="select"] ul li a {
 	color: white !important;
 	text-decoration: none;
 }
 
 nav[role="select"] ul li a:hover {
-	color: #00A86B !important;
+	color: #FF5948 !important;
 }
+.grid-item-container {
+    clear:both;
+    display:grid;
+    grid-template-columns: autofit, 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap:3.67%;
+    grid-template-rows: minmax(80px, 1fr);
+}
+header {
+    grid-column-start:4;
+    grid-column-end:12;
+    grid-row-start:6;
+}
+.primary-headline-holder {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    justify-content: center;
+    color:black;
+} 
+h1 {
+    color:black;
+    font-size:5em;
+    font-family:'Roboto-Slab', sans-serif;
+}
+ 
+.main-page-subtext {
+    font-size:1.5em;
+    grid-column-start:5;
+    grid-column-end:8;
+    grid-row-start: 5;
+    justify-content:center;
+}
+
 @media screen and (max-width: 44em) {
 		body {
 			margin: 1em 0;
 		}
-		nav[role="select"] ul {
+		nav[role="select"] ul.first-nav-bar {
 			display: none;
 		}
 		nav[role="select"]:after {
 			position: absolute;
 			z-index: -1;
-			content: "Menu";
 			right: 0;
 			bottom: -1.75em;
 			background: rgba(174, 86, 168, 0.4);
